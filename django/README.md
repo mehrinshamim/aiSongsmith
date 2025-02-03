@@ -40,3 +40,18 @@ database
     fname : text
     name : text
     //spotify login info/credentials
+
+
+
+
+
+tech stack is Django , basic react to see the workflow
+API s are spotify web api , genius api 
+apotify web sdk api
+
+### Technologies/Components Used
+For Software:
+- **Languages used**: Python, Javascript
+- **Frameworks used**: Django , Reactjs 
+- **Libraries used**: Spotify Web API, Genius API, Spotify Web SDK API
+- **Tools used**: Render, Vercel
