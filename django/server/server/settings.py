@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',  #added the 3 for rest api
     'corsheaders',
     'songsmith',
+    'drf_yasg',  # Swagger
 ]
 
 MIDDLEWARE = [
@@ -88,6 +89,27 @@ DATABASES = {
     }
 }
 
+##dk if i need this --------------------------------------
+# Add after INSTALLED_APPS list
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
+# Add after CORS_ALLOWED_ORIGINS
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+###---------------------------
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
