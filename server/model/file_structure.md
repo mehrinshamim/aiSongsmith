@@ -47,3 +47,8 @@ server/
 │
 ├── requirements.txt              # Python dependencies
 └── README.md                    # Documentation
+
+
+
+to run emotion_detector
+python -m server.model.emotion_detection
