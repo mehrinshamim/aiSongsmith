@@ -1,2 +1,7 @@
 python-dotenv
 spotipy
+fastapi
+uvicorn
+pydantic
+httpx
+python-multipart

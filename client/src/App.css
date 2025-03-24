@@ -1,0 +1,274 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #1DB954;
+  /* Spotify green */
+}
+
+.auth-section {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #282828;
+  border-radius: 8px;
+}
+
+.spotify-button {
+  display: inline-block;
+  background-color: #1DB954;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.spotify-button:hover {
+  background-color: #1ed760;
+}
+
+.auth-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.logout-button {
+  margin-left: auto;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  color: #b3b3b3;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.tabs button.active {
+  color: #fff;
+  border-bottom: 2px solid #1DB954;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background-color: #282828;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  color: #b3b3b3;
+}
+
+.stat-card p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.time-range-tabs {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.time-range-tabs button {
+  background: none;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.time-range-tabs button.active {
+  background-color: #1DB954;
+  border-color: #1DB954;
+}
+
+.artists-grid,
+.playlists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.artist-card,
+.playlist-card {
+  background-color: #181818;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.artist-card:hover,
+.playlist-card:hover {
+  background-color: #282828;
+}
+
+.artist-card img,
+.playlist-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.artist-card h3,
+.playlist-card h3 {
+  margin: 0.8rem;
+  font-size: 1rem;
+}
+
+.artist-card p,
+.playlist-card p {
+  margin: 0 0.8rem 0.8rem;
+  font-size: 0.8rem;
+  color: #b3b3b3;
+}
+
+.tracks-list {
+  background-color: #181818;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid #282828;
+}
+
+.track-item:last-child {
+  border-bottom: none;
+}
+
+.track-number {
+  width: 30px;
+  text-align: center;
+  color: #b3b3b3;
+}
+
+.track-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.track-info h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.track-info p {
+  margin: 0.3rem 0 0;
+  font-size: 0.8rem;
+  color: #b3b3b3;
+}
+
+.track-info small {
+  display: block;
+  font-size: 0.7rem;
+  color: #6c6c6c;
+  margin-top: 0.3rem;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.5rem;
+}
+
+.error {
+  color: #ff5252;
+}
+
+* {
+  box-sizing: border-box;
+}
