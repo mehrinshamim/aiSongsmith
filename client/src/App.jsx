@@ -1,15 +1,13 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import AuthSuccess from './components/AuthSuccess';
 import Dashboard from './components/Dashboard';
-import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="min-h-screen bg-black text-white">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth-success" element={<AuthSuccess />} />
@@ -21,4 +19,3 @@ function App() {
 }
 
 export default App;
-
