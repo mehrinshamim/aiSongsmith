@@ -23,7 +23,7 @@ function Dashboard() {
     const fetchUserData = async () => {
       try {
         // Fetch user profile
-        const profileRes = await fetch(`${apiUrl}/user-profile?access_token=${accessToken}`);
+        const profileRes = await fetch(`${apiUrl}/spotify/user-profile?access_token=${accessToken}`);
         
         if (!profileRes.ok) {
           // Handle unauthorized or expired token
@@ -38,7 +38,7 @@ function Dashboard() {
         setProfile(profileData);
         
         // Fetch music taste data
-        const musicTasteRes = await fetch(`${apiUrl}/music-taste?access_token=${accessToken}`);
+        const musicTasteRes = await fetch(`${apiUrl}/spotify/music-taste?access_token=${accessToken}`);
         
         if (!musicTasteRes.ok) {
           throw new Error('Failed to fetch music taste data');
@@ -66,7 +66,7 @@ function Dashboard() {
         throw new Error('No refresh token available');
       }
       
-      const response = await fetch(`${apiUrl}/refresh-token?refresh_token=${refreshToken}`);
+      const response = await fetch(`${apiUrl}/spotify/refresh-token?refresh_token=${refreshToken}`);
       
       if (!response.ok) {
         throw new Error('Failed to refresh token');

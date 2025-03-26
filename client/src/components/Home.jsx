@@ -18,7 +18,7 @@ function Home() {
           </p>
           
           <a
-            href={`${apiUrl}/login`}
+            href={`${apiUrl}/spotify/login`}
             className="w-full inline-block bg-green-500 text-black font-bold py-3 px-6 rounded-full 
             hover:bg-green-400 transition-colors duration-300 ease-in-out 
             transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
