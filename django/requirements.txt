@@ -1,8 +1,0 @@
-django
-djangorestframework
-django-cors--headers
-spotipy
-python-dotenv
-
-drf-yasg ##swagger drf
-#psyco-pg2  #for supabase later
